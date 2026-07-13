@@ -5,13 +5,19 @@
 </p>
 
 <p align="center">
+  <a href="https://wpaikits.site/kits/media"><strong>Download Media AI Kit</strong></a>
+  |
   <a href="https://wpaikits.site"><strong>Website</strong></a>
   |
   <a href="#quick-start"><strong>Quick Start</strong></a>
   |
   <a href="#privacy-and-ai-providers"><strong>Privacy</strong></a>
-  |
-  <a href="#roadmap"><strong>Roadmap</strong></a>
+</p>
+
+<p align="center">
+  <a href="https://wpaikits.site/kits/media">
+    <img alt="Download Media AI Kit" src="https://img.shields.io/badge/Download%20Media%20AI%20Kit-111111?style=for-the-badge">
+  </a>
 </p>
 
 <p align="center">
@@ -47,7 +53,7 @@ WP AI Kits turns that backlog into a controlled background task. It helps site o
 
 ## Quick Start
 
-1. Download or clone this repository.
+1. Download the plugin from https://wpaikits.site/kits/media.
 2. Upload the plugin folder to `wp-content/plugins/`.
 3. Activate **WP AI Kits** in WordPress.
 4. Open **WP AI Kits** in wp-admin.
