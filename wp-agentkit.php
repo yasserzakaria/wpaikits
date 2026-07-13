@@ -29,7 +29,7 @@ if ( ! function_exists( 'wpa_fs' ) ) {
 				'is_premium'       => false,
 				'has_addons'       => false,
 				'has_paid_plans'   => false,
-				// Not distributed on WordPress.org, so Freemius delivers updates.
+				// Not distributed on WordPress.org; free updates come from GitHub releases.
 				'is_org_compliant' => false,
 				// Optional opt-in: users can Skip. We still collect the email
 				// from everyone who connects, without walling off the plugin.
@@ -77,6 +77,7 @@ require_once WPAK_PATH . 'includes/Core/class-wpak-ai-log-admin.php';
 require_once WPAK_PATH . 'includes/Core/class-wpak-onboarding.php';
 require_once WPAK_PATH . 'includes/Core/class-wpak-activation-redirect.php';
 require_once WPAK_PATH . 'includes/Core/class-wpak-uninstaller.php';
+require_once WPAK_PATH . 'includes/Core/class-wpak-update-checker.php';
 require_once WPAK_PATH . 'includes/Core/class-wpak-queue.php';
 require_once WPAK_PATH . 'includes/Core/class-wpak-pinecone.php';
 require_once WPAK_PATH . 'includes/Core/class-wpak-llm-proxy.php';
@@ -86,6 +87,8 @@ require_once WPAK_PATH . 'includes/Core/class-wpak-runtime-registry.php';
 require_once WPAK_PATH . 'includes/Modules/Archivist/class-wpak-archivist.php';
 
 register_activation_hook( __FILE__, 'wpaikits99_activate' );
+
+WPAK_Update_Checker::register();
 
 add_action( 'plugins_loaded', 'wpaikits99_init' );
 WPAK_Uninstaller::register_hooks();
