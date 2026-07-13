@@ -3,7 +3,7 @@
  * Plugin Name: WP AI Kits
  * Plugin URI:  https://wpaikits.site
  * Description: AI-written media metadata with rate-limit-aware background processing for WordPress.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      WP AI Kits
  * Text Domain: wp-agentkit
  */
@@ -57,7 +57,7 @@ if ( ! function_exists( 'wpa_fs' ) ) {
 	do_action( 'wpa_fs_loaded' );
 }
 
-define( 'WPAK_VERSION', '1.0.2' );
+define( 'WPAK_VERSION', '1.0.3' );
 define( 'WPAK_FILE', __FILE__ );
 define( 'WPAK_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WPAK_URL', plugin_dir_url( __FILE__ ) );

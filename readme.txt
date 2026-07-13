@@ -4,7 +4,7 @@ Tags: media, ai, accessibility, alt text, images
 Requires at least: 6.5
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ Not unless you enable the per-field overwrite toggles. Filled fields are skipped
 With `WP_DEBUG` and `WP_DEBUG_LOG` enabled, Media Sync and redacted LLM diagnostics are written to the normal WordPress debug log, usually `wp-content/debug.log`. Add `define( 'WPAK_SYNC_DEBUG', true );` only when a separate `wp-content/wpak-sync-debug.log` copy is also needed. API keys and image data are never logged.
 
 == Changelog ==
+
+= 1.0.3 =
+* Test GitHub automatic updates with a published release ZIP.
 
 = 1.0.2 =
 * Add GitHub-powered automatic updates for the free plugin.
