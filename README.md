@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://wpaikits.site">
-    <img src="assets/github/cover.svg" alt="WP AI Kits - AI metadata for WordPress media libraries" width="100%">
+    <img src="assets/github/cover.png" alt="WP AI Kits - small AI kits for real WordPress workflows" width="100%">
   </a>
 </p>
 
