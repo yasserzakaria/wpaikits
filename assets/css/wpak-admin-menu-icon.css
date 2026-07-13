@@ -1,0 +1,11 @@
+#adminmenu .toplevel_page_wpaikits .wp-menu-image img {
+    height: 20px;
+    opacity: 0.82;
+    padding: 7px 0 0;
+    width: 20px;
+}
+
+#adminmenu .toplevel_page_wpaikits.current .wp-menu-image img,
+#adminmenu .toplevel_page_wpaikits:hover .wp-menu-image img {
+    opacity: 1;
+}

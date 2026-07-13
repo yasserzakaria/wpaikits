@@ -1,0 +1,48 @@
+:root {
+    --wpak-color-bone: #FBFBFA;
+    --wpak-color-white: #FFFFFF;
+    --wpak-color-gray: #EAEAEA;
+    --wpak-color-gray-strong: #D7D7D2;
+    --wpak-color-black: #111111;
+
+    --wpak-color-red-bg: #FDEBEC;
+    --wpak-color-red-text: #9F2F2D;
+    --wpak-color-blue-bg: #E1F3FE;
+    --wpak-color-blue-text: #1F6C9F;
+    --wpak-color-green-bg: #EDF3EC;
+    --wpak-color-green-text: #346538;
+    --wpak-color-yellow-bg: #FBF3DB;
+    --wpak-color-yellow-text: #956400;
+
+    --wpak-font-serif: 'Newsreader', serif;
+    --wpak-font-sans: 'Outfit', sans-serif;
+    --wpak-font-mono: 'JetBrains Mono', monospace;
+
+    --wpak-bg: var(--wpak-color-bone);
+    --wpak-surface: var(--wpak-color-white);
+    --wpak-border: var(--wpak-color-gray);
+    --wpak-border-strong: var(--wpak-color-gray-strong);
+    --wpak-text: var(--wpak-color-black);
+    --wpak-text-muted: rgba(17, 17, 17, 0.72);
+    --wpak-text-faint: rgba(17, 17, 17, 0.52);
+    --wpak-focus-ring: rgba(17, 17, 17, 0.16);
+
+    --wpak-radius-xs: 4px;
+    --wpak-radius-sm: 6px;
+    --wpak-radius: 8px;
+    --wpak-radius-lg: 12px;
+    --wpak-shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.05);
+    --wpak-shadow-md: 0 12px 32px rgba(17, 17, 17, 0.08);
+    --wpak-shadow-lg: 0 24px 60px rgba(17, 17, 17, 0.12);
+
+    --wpak-space-1: 4px;
+    --wpak-space-2: 8px;
+    --wpak-space-3: 12px;
+    --wpak-space-4: 16px;
+    --wpak-space-5: 20px;
+    --wpak-space-6: 24px;
+    --wpak-space-8: 32px;
+    --wpak-space-10: 40px;
+
+    --wpak-transition: 180ms ease;
+}
