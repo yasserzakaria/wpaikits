@@ -4,7 +4,7 @@ Tags: media, ai, accessibility, alt text, images
 Requires at least: 6.5
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,14 +52,5 @@ With `WP_DEBUG` and `WP_DEBUG_LOG` enabled, Media Sync and redacted LLM diagnost
 
 == Changelog ==
 
-= 1.0.3 =
-* Test GitHub automatic updates with a published release ZIP.
-
-= 1.0.2 =
-* Add GitHub-powered automatic updates for the free plugin.
-
-= 1.0.1 =
-* Bridge release for GitHub automatic updates.
-
 = 1.0.0 =
-* Initial free Media AI Kit release.
+* Initial public release of WP AI Kits and the free Media AI Kit.

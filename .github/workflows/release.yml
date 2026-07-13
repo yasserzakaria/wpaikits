@@ -16,6 +16,15 @@ jobs:
       - name: Check out the tagged release
         uses: actions/checkout@v4
 
+      - name: Remove test release history
+        if: github.ref == 'refs/tags/v1.0.0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete v1.0.3 --yes --cleanup-tag || true
+          git push origin :refs/tags/v1.0.2 || true
+          git push origin :refs/tags/v1.0.3 || true
+
       - name: Build WordPress plugin ZIP
         run: |
           mkdir -p release/wpaikits
