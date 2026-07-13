@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" class="idle-state" style="&#10;">
+  <defs>
+    <style>
+      .logo-shape { 
+        stroke: #111827; 
+        stroke-width: 8; 
+        stroke-linecap: round; 
+        fill: none; 
+      }
+      .logo-fill { 
+        fill: #111827; 
+      }
+
+      /* ── KEYFRAMES ── */
+
+      @keyframes eye-blink {
+        0%, 38%, 42%, 100% { transform: scaleY(1); }
+        40% { transform: scaleY(0.08); }
+      }
+
+      /* Gentle breathing: tiny sway, like resting */
+      @keyframes breathe-cw {
+        0%, 100% { transform: rotate(0deg); }
+        50%      { transform: rotate(10deg); }
+      }
+      @keyframes breathe-ccw {
+        0%, 100% { transform: rotate(0deg); }
+        50%      { transform: rotate(-10deg); }
+      }
+
+      /* Full pendulum: 1 full turn forward then back */
+      @keyframes pendulum-cw {
+        0%, 100% { transform: rotate(0turn); }
+        50%      { transform: rotate(1turn); }
+      }
+      @keyframes pendulum-ccw {
+        0%, 100% { transform: rotate(0turn); }
+        50%      { transform: rotate(-1turn); }
+      }
+
+      /* Continuous spin: same direction forever, no reversing */
+      @keyframes spin-cw {
+        from { transform: rotate(0turn); }
+        to   { transform: rotate(1turn); }
+      }
+      @keyframes spin-ccw {
+        from { transform: rotate(0turn); }
+        to   { transform: rotate(-1turn); }
+      }
+
+      /* ── COMMON ── */
+
+      .arm-pair {
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        transform-origin: 0 0;
+      }
+
+      /* Blink: always 4s */
+      .idle-state .core-eye,
+      .thinking-state .core-eye,
+      .processing-state .core-eye,
+      .hyper-state .core-eye {
+        animation: eye-blink 4s ease-in-out infinite;
+        transform-origin: 0 0;
+      }
+
+      /* ── IDLE: gentle breathing, no full rotation ── */
+      .idle-state .arm-pair-a { animation-name: breathe-cw;  animation-duration: 8s;  }
+      .idle-state .arm-pair-b { animation-name: breathe-ccw; animation-duration: 10s; }
+      .idle-state .arm-pair-c { animation-name: breathe-cw;  animation-duration: 12s; }
+      .idle-state .arm-pair-d { animation-name: breathe-ccw; animation-duration: 9s;  }
+
+      /* ── THINKING: moderate full pendulum ── */
+      .thinking-state .arm-pair-a { animation-name: pendulum-cw;  animation-duration: 5s;  }
+      .thinking-state .arm-pair-b { animation-name: pendulum-ccw; animation-duration: 7s;  }
+      .thinking-state .arm-pair-c { animation-name: pendulum-cw;  animation-duration: 9s;  }
+      .thinking-state .arm-pair-d { animation-name: pendulum-ccw; animation-duration: 6s;  }
+
+      /* ── PROCESSING: fast pendulum ── */
+      .processing-state .arm-pair-a { animation-name: pendulum-cw;  animation-duration: 2.5s; }
+      .processing-state .arm-pair-b { animation-name: pendulum-ccw; animation-duration: 3.5s; }
+      .processing-state .arm-pair-c { animation-name: pendulum-cw;  animation-duration: 4.5s; }
+      .processing-state .arm-pair-d { animation-name: pendulum-ccw; animation-duration: 3s;  }
+
+      /* ── HYPER: continuous spin, no reversing ── */
+      /* Ortho (A+B solid dots) = CW together, Diag (C+D rings) = CCW together */
+      .hyper-state .arm-pair-a { animation-name: spin-cw;  animation-duration: 1.2s; animation-timing-function: linear; }
+      .hyper-state .arm-pair-b { animation-name: spin-cw;  animation-duration: 1.2s; animation-timing-function: linear; }
+      .hyper-state .arm-pair-c { animation-name: spin-ccw; animation-duration: 1.2s; animation-timing-function: linear; }
+      .hyper-state .arm-pair-d { animation-name: spin-ccw; animation-duration: 1.2s; animation-timing-function: linear; }
+
+      /* Orbit rings */
+      .idle-state .outer-orbits,
+      .thinking-state .outer-orbits,
+      .processing-state .outer-orbits,
+      .hyper-state .outer-orbits {
+        display: block !important;
+        opacity: 0.35 !important;
+      }
+
+      /* Smooth transitions */
+      .core-eye, .outer-orbits {
+        transition: all 0.5s ease-in-out;
+      }
+    </style>
+
+    <g id="ortho-arm">
+      <line x1="0" y1="-58" x2="0" y2="-84" class="logo-shape"/>
+      <circle cx="0" cy="-124" r="9" class="logo-fill"/>
+    </g>
+    <g id="diag-arm">
+      <line x1="0" y1="-58" x2="0" y2="-118" class="logo-shape"/>
+      <circle cx="0" cy="-136" r="14" class="logo-shape"/>
+    </g>
+  </defs>
+
+  <!-- Background -->
+  
+
+  <!-- Logo Group centered at (400, 240) -->
+  <g transform="translate(200, 185)" style="&#10;    width: 100%;&#10;    height: 100%;&#10;    width: 800px;&#10;">
+    
+    <!-- Background Orbit Rings -->
+    <g class="outer-orbits" style="opacity: 0; pointer-events: none;">
+       <circle cx="0" cy="0" r="180" fill="none" stroke="#F3F4F6" stroke-width="1"/>
+       <circle cx="0" cy="0" r="130" fill="none" stroke="#D1D5DB" stroke-width="1" stroke-dasharray="15 25"/>
+       <circle cx="0" cy="0" r="155" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="2 12"/>
+    </g>
+
+    <!-- Pair A: Vertical (0/180) -->
+    <g class="arm-pair arm-pair-a">
+      <use href="#ortho-arm"/>
+      <use href="#ortho-arm" transform="rotate(180)"/>
+    </g>
+
+    <!-- Pair B: Horizontal (90/270) -->
+    <g class="arm-pair arm-pair-b">
+      <use href="#ortho-arm" transform="rotate(90)"/>
+      <use href="#ortho-arm" transform="rotate(270)"/>
+    </g>
+
+    <!-- Pair C: Diagonal (45/225) -->
+    <g class="arm-pair arm-pair-c">
+      <use href="#diag-arm" transform="rotate(45)"/>
+      <use href="#diag-arm" transform="rotate(225)"/>
+    </g>
+
+    <!-- Pair D: Diagonal (135/315) -->
+    <g class="arm-pair arm-pair-d">
+      <use href="#diag-arm" transform="rotate(135)"/>
+      <use href="#diag-arm" transform="rotate(315)"/>
+    </g>
+
+    <!-- Main Circular Body -->
+    <circle cx="0" cy="0" r="56" class="logo-shape"/>
+    
+    <!-- Core Eye -->
+    <g class="core-eye">
+        <circle cx="0" cy="0" r="28" class="logo-fill"/>
+        <path d="M -17 -6 A 18 18 0 0 1 -6 -17" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+
+</svg>
